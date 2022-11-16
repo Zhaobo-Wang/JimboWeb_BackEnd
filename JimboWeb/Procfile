@@ -1,1 +1,1 @@
-web gunicorn JimboWeb.wsgi:application --log-file -
+web: gunicorn JimboWeb.wsgi --log-file -
