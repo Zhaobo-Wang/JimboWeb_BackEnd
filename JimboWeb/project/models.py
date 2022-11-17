@@ -4,7 +4,7 @@ from django.db import models
 
 
 def upload_to(instance, filename):
-    return 'images/{filename}'.format(filename=filename)
+    return '{filename}'.format(filename=filename)
     
 class Project(models.Model):
     project_number = models.IntegerField(primary_key=True, default = '0')
