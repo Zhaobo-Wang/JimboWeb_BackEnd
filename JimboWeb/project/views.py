@@ -11,7 +11,7 @@ from rest_framework.parsers import MultiPartParser,FormParser
 #get all projects
 @api_view(['GET'])
 def projects_list(request):
-    projects = Project.objects.filter('project_number').order_by('project_number')
+    projects = Project.objects.all().order_by('project_number')
     serializer = ProjectSerializer(projects, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
