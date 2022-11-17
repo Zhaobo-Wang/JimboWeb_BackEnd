@@ -7,7 +7,7 @@ def upload_to(instance, filename):
     return 'images/{filename}'.format(filename=filename)
     
 class Project(models.Model):
-    project_number = models.IntegerField(default = '0')
+    project_number = models.IntegerField(primary_key=True, default = '0')
     title = models.CharField(max_length=50, default='no titles')
     project_date = models.CharField(max_length=50, default='no date')
     category = models.CharField(max_length=50, default='no category')
